@@ -1,14 +1,14 @@
-.App {
+.Aurum {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Aurum-header {
+  background-color: #fff;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,4 +19,8 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.Aurum-body {
+  background-color: red;
 }
