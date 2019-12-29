@@ -1,4 +1,9 @@
 import React from 'react';
+import stack from '../assets/stack.svg';
+import book from '../assets/book.svg';
+import chart from '../assets/chart.svg';
+import gear from '../assets/gear.svg';
+import play from '../assets/play.svg';
 import styled from 'styled-components';
 
 import { useSpring, animated } from 'react-spring';
@@ -16,10 +21,16 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+          <img src={stack} className="stack-icon" alt="stack" />
+          <li><a href="/" onClick={props.handleNavbar}>Todos</a></li>
+          <img src={book} className="book-icon" alt="book" />
+          <li><a href="/" onClick={props.handleNavbar}>E-books</a></li>
+          <img src={chart} className="chart-icon" alt="chart" />
+          <li><a href="/" onClick={props.handleNavbar}>Infográficos</a></li>
+          <img src={play} className="play-icon" alt="play" />
+          <li><a href="/" onClick={props.handleNavbar}>Webinar</a></li>
+          <img src={gear} className="gear-icon" alt="gear" />
+          <li><a href="/" onClick={props.handleNavbar}>Ferramentas</a></li>
         </NavLinks>
       </CollapseWrapper>
     );
@@ -48,7 +59,6 @@ const NavLinks = styled.ul`
     font-size: 1.4rem;
     line-height: 2;
     color: #dfe6e9;
-    text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
     &:hover {

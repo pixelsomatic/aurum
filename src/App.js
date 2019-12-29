@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.scss';
-import Menu from './pages/Menu';
 import Navbar from "./pages/Navbar";
 
 import GlobalStyle from './styles/Global';
@@ -25,7 +24,6 @@ class App extends Component {
         <GlobalStyle />
         <div className="Aurum">
       <header className="Aurum-header">
-        <Menu />
       </header>
       <body className="Aurum-body"> Teste </body>
     </div>
@@ -33,16 +31,5 @@ class App extends Component {
     )
   }
 }
-
-// function App() {
-//   return (
-//     <div className="Aurum">
-//       <header className="Aurum-header">
-//         <Menu />
-//       </header>
-//       <body className="Aurum-body"> Teste </body>
-//     </div>
-//   );
-// }
 
 export default App;
