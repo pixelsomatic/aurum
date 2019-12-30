@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import './App.scss';
-import Navbar from "./pages/Navbar";
-
+import Navbar from './components/Navbar';
+import Posts from './components/Posts';
 import GlobalStyle from './styles/Global';
+import PostList from './components/PostList'; 
+
 
 class App extends Component {
   state = {
@@ -25,7 +27,11 @@ class App extends Component {
         <div className="Aurum">
       <header className="Aurum-header">
       </header>
-      <body className="Aurum-body"> Teste </body>
+      <div className="Aurum-body">
+          {/* <Posts /> */}
+          <PostList/>
+         Teste body
+      </div>
     </div>
       </>
     )
