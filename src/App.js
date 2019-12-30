@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss';
 import Navbar from './components/Navbar';
-import Posts from './components/Posts';
+import PostImage from './components/GetImages';
 import GlobalStyle from './styles/Global';
 import PostList from './components/PostList'; 
 
@@ -28,8 +28,8 @@ class App extends Component {
       <header className="Aurum-header">
       </header>
       <div className="Aurum-body">
-          {/* <Posts /> */}
           <PostList/>
+          <PostImage />
          Teste body
       </div>
     </div>

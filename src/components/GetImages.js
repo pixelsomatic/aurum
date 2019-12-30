@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
 import ReactHtmlParser from 'react-html-parser'; 
 
-class PostList extends Component {
+class PostImage extends Component {
    constructor(props) {
        super(props);
        this.state = {
-           posts: [],
-           data: false
+           image: false
        };
        this.receiveData = this.receiveData.bind(this);
    }
@@ -18,10 +17,8 @@ class PostList extends Component {
         })
         .then(jsonResponse => {
             console.log(jsonResponse);
-            const ebookCardTitle = jsonResponse[1].title.rendered;
-            const ebookCardExcerpt = jsonResponse[1].excerpt.rendered;
-            var ebookCard = ebookCardTitle.concat(ebookCardExcerpt);
-            this.receiveData(ebookCard);
+            const ebookCardImage = jsonResponse[1]._embedded['wp:featuredmedia']['0'].source_url;
+            this.receiveData(ebookCardImage);
         });
     }
     receiveData(data) {
@@ -29,9 +26,9 @@ class PostList extends Component {
     }
     render() {
         return(
-            <div> { ReactHtmlParser (this.state.data) } </div>
+            <div> <img src={ ReactHtmlParser (this.state.data)} /> </div>
             );
         }
     }
     
-    export default PostList;
+    export default PostImage;
