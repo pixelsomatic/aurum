@@ -18,7 +18,7 @@ class PostImage extends Component {
         })
         .then(jsonResponse => {
             console.log(jsonResponse);
-            const ebookCardImage = jsonResponse[1]._embedded['wp:featuredmedia']['0'].source_url;
+            const ebookCardImage = jsonResponse[0]._embedded['wp:featuredmedia']['0'].source_url;
             this.receiveData(ebookCardImage);
         });
     }

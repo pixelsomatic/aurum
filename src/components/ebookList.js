@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 import styled from 'styled-components';
 import plusIcon from '../assets/plus.svg';
 
-class PostList extends Component {
+class ebookList extends Component {
    constructor(props) {
        super(props);
        this.state = {
@@ -19,8 +19,8 @@ class PostList extends Component {
             return response.json();
         })
         .then(jsonResponse => {
-            const infoCardExcerpt = jsonResponse[1].excerpt.rendered;
-            this.receiveData(infoCardExcerpt);
+            const ebookCardExcerpt = jsonResponse[0].excerpt.rendered;
+            this.receiveData(ebookCardExcerpt);
         });
     }
     receiveData(data) {
@@ -33,36 +33,38 @@ class PostList extends Component {
                 <div> { ReactHtmlParser (this.state.data) } </div>
             </CardText>
             <PlusButton>
-               <img src={plusIcon} />
-               <p> Saiba mais sobre o infográfico. </p>
+                <img src={plusIcon} />
+                <p> Saiba mais sobre o ebook. </p>
             </PlusButton>
             </>
             );
         }
     }
     
-    export default PostList;
+    export default ebookList;
 
     const CardText = styled.div`
         word-break: break-word;
         width: 63rem;
         background-color: white;
         margin-left: 32.2rem;
-        height: 23rem;
+        height: 19rem;
         font-size: large;
-        padding: 1rem;
-        margin-top: -7rem;
+        padding: 2rem;
+        margin-top: -3rem;
         font-family: 'Open Sans';
         @media (max-width:768px) {
             width: 100%;
             margin-left: 0;
             margin-top: -1rem;
             text-align: center;
+            height: 26rem;
         }
     `;
-        const PlusButton = styled.div`
+
+    const PlusButton = styled.div`
         width: 10rem;
-        margin-top: -6rem;
+        margin-top: -5rem;
         margin-left: 34rem;
         & p {
             position: absolute;
@@ -74,6 +76,7 @@ class PostList extends Component {
             color: #09d3ac;
         }
         @media (max-width:768px) {
-            margin-left: 4rem;
+            margin-left: 6rem;
+            margin-top: -5.2rem;
         }
-        `;
+    `;

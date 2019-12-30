@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import './App.scss';
 import Navbar from './components/Navbar';
 import PostImage from './components/GetImages';
+import InfoImage from './components/GetImagesInfo';
 import GlobalStyle from './styles/Global';
 import PostList from './components/PostList'; 
+import EbookList from './components/ebookList'; 
+import PostTitle from './components/PostTitle'; 
+import EbookTitle from './components/ebookTitle'; 
 
 
 class App extends Component {
@@ -24,13 +28,23 @@ class App extends Component {
           handleNavbar={this.handleNavbar}
         />
         <GlobalStyle />
-        <div className="Aurum">
-      <header className="Aurum-header">
-      </header>
+    <div className="Aurum">
+      <header className="Aurum-header"></header>
       <div className="Aurum-body">
-          <PostList/>
+        <div className="Image-section">
           <PostImage />
-         Teste body
+        </div>
+        <div>
+          <PostTitle/>
+          <PostList/>
+        </div>
+        <div className="Image-section-info">
+          <InfoImage />
+        </div>
+        <div>
+          <EbookTitle />
+          <EbookList />
+        </div>
       </div>
     </div>
       </>

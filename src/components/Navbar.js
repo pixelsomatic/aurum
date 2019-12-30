@@ -62,7 +62,7 @@ export default Navbar
 const NavBar = styled(animated.nav)`
   position: fixed;
   width: 100%;
-  top: 2rem;
+  top: 0rem;
   left: 0;
   background: #fff;
   z-index: 1;
@@ -79,6 +79,7 @@ const FlexContainer = styled.div`
   padding: 0 2rem;;
   justify-content: space-between;
   height: 5rem;
+  margin-top: 2rem;
 `;
 
 const NavLinks = styled(animated.ul)`
