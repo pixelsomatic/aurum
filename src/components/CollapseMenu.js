@@ -46,6 +46,9 @@ const CollapseWrapper = styled(animated.div)`
   top: 4.5rem;
   left: 0;
   right: 0;
+  @media (max-width:768px) {
+    top: 5.5rem;
+  }
 `;
 
 const NavLinks = styled.ul`

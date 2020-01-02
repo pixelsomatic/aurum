@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import './App.scss';
-import Navbar from "./pages/Navbar";
-
+import Navbar from './components/Navbar';
+import PostImage from './components/GetImages';
+import InfoImage from './components/GetImagesInfo';
 import GlobalStyle from './styles/Global';
+import PostList from './components/PostList'; 
+import EbookList from './components/ebookList'; 
+import PostTitle from './components/PostTitle'; 
+import EbookTitle from './components/ebookTitle'; 
+
 
 class App extends Component {
   state = {
@@ -22,10 +28,24 @@ class App extends Component {
           handleNavbar={this.handleNavbar}
         />
         <GlobalStyle />
-        <div className="Aurum">
-      <header className="Aurum-header">
-      </header>
-      <body className="Aurum-body"> Teste </body>
+    <div className="Aurum">
+      <header className="Aurum-header"></header>
+      <div className="Aurum-body">
+        <div className="Image-section">
+          <PostImage />
+        </div>
+        <div>
+          <PostTitle/>
+          <PostList/>
+        </div>
+        <div className="Image-section-info">
+          <InfoImage />
+        </div>
+        <div>
+          <EbookTitle />
+          <EbookList />
+        </div>
+      </div>
     </div>
       </>
     )

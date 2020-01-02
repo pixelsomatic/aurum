@@ -1,6 +1,4 @@
-.Aurum {
-  text-align: center;
-}
+@import url('https://fonts.google.com/specimen/Open+Sans');
 
 .App-logo {
   height: 15vmin;
@@ -25,5 +23,25 @@
 }
 
 .Aurum-body {
-  background-color: red;
+  background-color: #AEAEB7;
+  height: 120vh;
+  @media screen and (max-width:768px) {
+    height: 240vh;
+  }
+}
+
+.Image-section {
+  margin-left: 12rem;
+  padding-top: 3rem;
+  @media screen and (max-width:768px) {
+    margin-left: 8rem;
+  }
+}
+
+.Image-section-info {
+  margin-left: 12rem;
+  padding-top: 10rem;
+  @media screen and (max-width:768px) {
+    margin-left: 8rem;
+  }
 }
