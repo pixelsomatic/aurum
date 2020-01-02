@@ -10,8 +10,6 @@ ReactDOM.render(
 <BrowserRouter basename="/bdr">
     <Switch>
         <Route path="/" exact={true} component={App} />
-        <Route path="/ebooks" component={Ebooks} />
-        <Route path="/infograficos" component={Infos} />
     </Switch>
 </BrowserRouter>
 </>
