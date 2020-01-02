@@ -6,7 +6,7 @@ import chart from '../assets/chart.svg';
 import gear from '../assets/gear.svg';
 import play from '../assets/play.svg';
 import stack from '../assets/stack.svg';
-
+import {Link} from 'react-router-dom';
 
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
@@ -29,18 +29,23 @@ const Navbar = (props) => {
       <NavBar style={barAnimation}>
         <FlexContainer>
           <NavLinks style={linkAnimation}>
-            <img src={stack} className="stack-icon" alt="stack" />
-            <a href="/">Todos</a>
-            <img src={book} className="book-icon" alt="book" />
-            <a href="/">E-books</a>
+            <Link to="/">
+              <img src={stack} className="stack-icon" alt="stack" />
+              <button>Todos</button>
+            </Link>
+            <Link to="/ebooks">
+              <img src={book} className="book-icon" alt="book" />
+              <button>E-books</button>
+            </Link>
             <img src={chart} className="chart-icon" alt="chart" />
-            <a href="/">Infográficos</a>
+            <button>Infográficos</button>
             <img src={play} className="play-icon" alt="play" />
-            <a href="/">Webinar</a>
+            <button>Webinar</button>
             <img src={gear} className="gear-icon" alt="gear" />
-            <a href="/">Ferramentas</a>
+            <button>Ferramentas</button>
             <p>Aurum</p>
           </NavLinks>
+          <p> Materiais gratuitos </p>
           <BurgerWrapper>
             <BurgerMenu
               navbarState={props.navbarState} 
@@ -80,6 +85,14 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   height: 5rem;
   margin-top: 2rem;
+  & p {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    color: #868797;
+    font-weight: 400;
+    margin-top: 0rem;
+    margin-right: 13rem;
+  }
 `;
 
 const NavLinks = styled(animated.ul)`
@@ -87,7 +100,7 @@ const NavLinks = styled(animated.ul)`
   list-style-type: none;
   margin: auto 0;
   
-  & a {
+  & button {
     color: #868797;
     font-weight: 400;
     font-size: 20px;
@@ -96,6 +109,8 @@ const NavLinks = styled(animated.ul)`
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
+    border: none;
+    background-color:transparent;
     &:hover {
       color: #0F1018;
     }
