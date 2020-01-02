@@ -3,7 +3,6 @@ React e Wordpress Web App. <br />
 
 Este projeto foi criado com [Create WP Theme](https://github.com/devloco/create-react-wptheme). <br />
 
-Você pode acessar ver a versão online deste app aqui no [Heroku](/). <br />
 O que você precisa fazer para executar este app:
 
 ## Requirements (Linux)
