@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Ebooks from './routes/Ebooks';
-import Infos from './routes/Infos';
 
 ReactDOM.render(
 <>

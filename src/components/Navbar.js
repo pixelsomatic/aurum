@@ -33,7 +33,7 @@ const Navbar = (props) => {
               <img src={stack} className="stack-icon" alt="stack" />
               <button>Todos</button>
             </Link>
-            <Link to="/ebooks">
+            <Link to="/">
               <img src={book} className="book-icon" alt="book" />
               <button>E-books</button>
             </Link>
